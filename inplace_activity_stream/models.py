@@ -15,7 +15,7 @@ def place_action_handler(verb, **kwargs):
     """
     actor = kwargs.get('sender', None)
     if not actor:
-        kwargs['actor'] = User.objects.get(pk=settings.ACTIVITY_STREAM_DEFAULT_ACTOR_PK)
+        kwargs['sender'] = User.objects.get(pk=settings.ACTIVITY_STREAM_DEFAULT_ACTOR_PK)
     return action_handler(verb, **kwargs)
 
 

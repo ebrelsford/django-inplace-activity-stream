@@ -11,7 +11,7 @@ class PlaceActionManager(GeoManager, ActionManager):
     A Manager that combines GeoManager and ActionManager for a place-based
     Action Manager.
     """
-    def get_query_set(self):
+    def get_queryset(self):
         return PlaceActivityQuerySet(self.model, using=self._db)
 
     @stream

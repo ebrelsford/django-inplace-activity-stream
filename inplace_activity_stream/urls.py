@@ -1,9 +1,9 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
 from .views import PlaceActivityFeed, PlaceActivityListView
 
 
-urlpatterns = patterns('',
+urlpatterns = [
 
     url(r'^feeds/all/$',
         PlaceActivityFeed(),
@@ -15,4 +15,4 @@ urlpatterns = patterns('',
         name='activitystream_activity_list'
     ),
 
-)
+]
